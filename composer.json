@@ -1,0 +1,9 @@
+{
+  "name": "hallowelt42/di",
+  "autoload": {
+    "psr-4": {
+      "DI\\": "src/"
+    }
+  },
+  "description": "none"
+}
