@@ -1,10 +1,10 @@
 <?php
 
 
-namespace DI\model;
+namespace DI\Model;
 
 
-use DI\types\ListType;
+use DI\Types\ListType;
 use Exception;
 
 class PersonList extends ListType
@@ -21,10 +21,9 @@ class PersonList extends ListType
   }
 
   /**
-   * @return \DI\model\Person
+   * @return \DI\Model\Person
    */
   public function current() {
     return $this->container[$this->position];
   }
-
 }

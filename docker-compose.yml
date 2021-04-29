@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  web:
+    image: exampledi/web
+    build:
+      context: .
+    volumes:
+      - ./app:/var/www/html
+    environment:
+      - APACHE_DOCUMENT_ROOT=/var/www/html/pub
+    ports:
+      - 80:80
