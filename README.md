@@ -1,5 +1,15 @@
 # ExampleDI
 Dependency Injection
 
-# run:
- php src/demo_di/index.php
+## First usage
+* cd ./app
+* composer install
+* cd -
+* docker-compose build
+
+## Run application
+* docker-compose up -d
+* call http://localhost
+
+## Stop application
+* docker-compose down
