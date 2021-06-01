@@ -9,7 +9,7 @@ use Countable;
 use Exception;
 use SeekableIterator;
 
-class ListType implements ArrayAccess, SeekableIterator, Countable  /*Serializable*/
+class ListType implements ArrayAccess, SeekableIterator, Countable  /* TODO : Serializable */
 {
     use TArrayAccess;
     use TCountable;
@@ -17,21 +17,21 @@ class ListType implements ArrayAccess, SeekableIterator, Countable  /*Serializab
     use TIterator;
 
     /**
-     * @var string
+     * @var ?string
      */
-    protected $T;
+    protected ?string $T;
 
     /**
      * @var array
      */
-    protected $container;
+    protected array $container;
 
     /**
      * ListType constructor.
-     * @param null $T
+     * @param string|null $T
      * @throws Exception
      */
-    public function __construct($T = NULL)
+    public function __construct(string $T = NULL)
     {
         if (class_exists($T) === FALSE) {
             throw new Exception();
