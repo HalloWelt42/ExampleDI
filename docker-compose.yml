@@ -1,5 +1,6 @@
 version: '3.8'
 services:
+
   web:
     image: exampledi/web
     build:
@@ -10,3 +11,11 @@ services:
       - APACHE_DOCUMENT_ROOT=/var/www/html/pub
     ports:
       - 80:80
+
+  db:
+      image: postgres
+      ports:
+          - "5432:5432"
+      environment:
+          POSTGRES_USER: "root"
+          POSTGRES_PASSWORD: "toor"
