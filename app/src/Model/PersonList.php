@@ -21,9 +21,10 @@ class PersonList extends ListType
   }
 
   /**
-   * @return \DI\Model\Person
+   * @return Person
    */
-  public function current() {
+  public function current(): Person
+  {
     return $this->container[$this->position];
   }
 }
