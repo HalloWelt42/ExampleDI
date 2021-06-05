@@ -5,5 +5,8 @@
       "DI\\": "src/"
     }
   },
-  "description": "none"
+  "description": "none",
+  "require-dev": {
+    "phpunit/phpunit": "^9"
+  }
 }

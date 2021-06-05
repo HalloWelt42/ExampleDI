@@ -19,3 +19,9 @@ services:
       environment:
           POSTGRES_USER: "root"
           POSTGRES_PASSWORD: "toor"
+
+  composer:
+      image: composer/composer
+      command: install
+      volumes:
+          - ./app:/app
